@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+button,
+input {
+  position: relative;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: var(--white-color);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* fonts */
+@font-face {
+  font-family: "iskry";
+  src: url(../fonts/iskry-bold.ttf) format(ttf);
+}
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-family: var(--pop-font);
+  overscroll-behavior: none;
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+/* roots */
+
+:root {
+  --i-font: "iskry";
+  --pop-font: "Poppins", sans-serif;
+  --black-color: #000;
+  --white-color: #fff;
+  --bg-color: #cecece;
+  --theme-color: #bababa;
+  --border-color: #cecece;
+  --h1-font: 11vw;
+  --pad-10: 10vh 0;
+  --btn-font: 1.2vw;
+  --logo-font: 1.8vw;
+  --light-font: 300;
+  --medium-font: 500;
+  --bold-font: bold;
+  --small-text: 1vw;
+}
+
+/* utilities classes */
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section {
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.center-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.text-box {
+  position: relative;
+  pointer-events: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.title {
+  font-size: var(--h1-font);
+  pointer-events: none;
+  font-family: var(--i-font);
+  font-weight: var(--bold-font);
+}
+
+.hover-btn {
+  font-size: var(--btn-font);
+  font-weight: var(--light-font);
+  letter-spacing: 1px;
+}
+
+.hover-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: var(--theme-color);
+  transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.hover-btn:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* nav bar style */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 2px 0 var(--border-color);
+}
+
+.nav .container {
+  padding: 2vh 0;
+  /* border-bottom: 1px solid var(--border-color); */
+}
+
+.nav .logo {
+  font-size: var(--logo-font);
+  font-weight: var(--medium-font);
+}
+
+.nav .nav-links a:hover,
+.nav .logo:hover {
+  color: var(--theme-color);
+}
+
+.nav .nav-links {
+  width: 20%;
+}
+
+/* scroller */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* scroll containers style */
+
+.wrapper,
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/*  */
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  display: inline-block;
+  height: 100vh;
+  white-space: nowrap;
+}
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.c-scrollbar {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  width: 11px;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  bottom: 0;
+  height: 10px;
+  top: auto;
+  transform: scaleY(1);
+  width: 100%;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+.c-scrollbar_thumb {
+  background-color: white;
+  border-radius: 10px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin: 2px;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7px;
+  /* display: none; */
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  bottom: 0;
+  right: auto;
+}
