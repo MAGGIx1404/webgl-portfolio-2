@@ -6,6 +6,9 @@ import Arrow from "../images/arrow.svg";
 import gsap from "gsap";
 import customscroll from "./scroll";
 
+const select = (e) => document.querySelector(e);
+const selectAll = (e) => document.querySelectorAll(e);
+
 window.addEventListener("load", function () {
   init();
 });
@@ -13,6 +16,7 @@ window.addEventListener("load", function () {
 function init() {
   customscroll();
   sphere();
+  scrollAnimation();
 }
 
 function sphere() {
@@ -277,4 +281,10 @@ function sphere() {
   }
 
   new Cloud();
+}
+
+// scroll animation
+
+function scrollAnimation() {
+  console.log("hhi");
 }

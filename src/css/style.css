@@ -198,6 +198,7 @@ body {
   --theme-color: #bababa;
   --border-color: #cecece;
   --h1-font: 11vw;
+  --h2-font: 9vw;
   --pad-10: 10vh 0;
   --btn-font: 1.2vw;
   --logo-font: 1.8vw;
@@ -205,6 +206,10 @@ body {
   --medium-font: 500;
   --bold-font: bold;
   --small-text: 1vw;
+  --medium-text: 1.6vw;
+  --big-text: 2vw;
+  --p-font: 1.1vw;
+  --h4-font: 2vw;
 }
 
 /* utilities classes */
@@ -244,6 +249,12 @@ body {
   height: 100%;
 }
 
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--white-color);
+}
+
 .text-box {
   position: relative;
   pointer-events: none;
@@ -262,6 +273,16 @@ body {
   pointer-events: none;
   font-family: var(--i-font);
   font-weight: var(--bold-font);
+}
+
+.mini-title {
+  font-size: var(--h4-font);
+  font-weight: var(--light-font);
+}
+
+.paragraph {
+  font-size: var(--p-font);
+  font-weight: var(--light-font);
 }
 
 .hover-btn {
@@ -298,10 +319,16 @@ body {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 0 2px 0 var(--border-color);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+.nav[data-direction="down"] {
+  transform: translate3d(0, -100%, 0);
 }
 
 .nav .container {
-  padding: 2vh 0;
+  padding: 3vh 0;
   /* border-bottom: 1px solid var(--border-color); */
 }
 
@@ -415,4 +442,10 @@ html.has-scroll-dragging {
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
   bottom: 0;
   right: auto;
+}
+
+/* footer start */
+footer {
+  padding: var(--pad-10);
+  box-shadow: 0 0 2px var(--white-color);
 }
