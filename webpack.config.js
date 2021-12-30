@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/javascript/index.js",
     case: "./src/javascript/case.js",
+    about: "./src/javascript/about.js",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -23,6 +24,12 @@ module.exports = {
       inject: true,
       chunks: ["case"],
       filename: "case.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/about.html",
+      inject: true,
+      chunks: ["about"],
+      filename: "about.html",
     }),
   ],
   output: {

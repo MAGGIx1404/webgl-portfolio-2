@@ -1,9 +1,7 @@
 import "../css/style.css";
-import "../css/case.css";
-import { gsap, Expo } from "gsap";
+import "../css/about.css";
+import html from "../pages/about.html";
 import * as THREE from "three";
-import Parallax from "parallax-js";
-import html from "../pages/case.html";
 import vertexShader from "./shaders/vertexShader.glsl";
 import fragmentShader from "./shaders/fragmentShader.glsl";
 
@@ -172,61 +170,3 @@ class MeshItem {
 
 init();
 new EffectCanvas();
-
-// parallax effect on mouse move
-
-var scene = document.getElementById("scene");
-var parallaxInstance = new Parallax(scene);
-
-const overlay = document.querySelector(".overlay");
-
-// overlay events
-function initOverlay() {
-  const tl = gsap.timeline();
-  tl.fromTo(
-    overlay,
-    1,
-    {
-      y: "0",
-      ease: Expo.easeInOut,
-    },
-    {
-      y: "-100%",
-      ease: Expo.easeInOut,
-    }
-  );
-}
-
-// on load event
-
-window.addEventListener("load", function () {
-  initOverlay();
-});
-
-// transition
-
-const anchors = document.querySelectorAll(".transition-btn");
-
-for (let i = 0; i < anchors.length; i++) {
-  const anchor = anchors[i];
-
-  anchor.addEventListener("click", (e) => {
-    e.preventDefault();
-    let target = e.target;
-
-    if (target.nodeName === "SPAN") {
-      target = target.parentElement.href;
-    }
-
-    const tl = gsap.timeline();
-
-    tl.to(overlay, 1, {
-      y: "0",
-      ease: Expo.easeInOut,
-    });
-
-    setTimeout(() => {
-      window.location.href = target;
-    }, 1100);
-  });
-}
