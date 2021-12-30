@@ -107,7 +107,7 @@ canvas {
   opacity: 0.3;
   background-color: var(--theme-color);
   transform-origin: center;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 .heading .text-box {

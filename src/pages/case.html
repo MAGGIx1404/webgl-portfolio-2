@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="loading" data-barba="wrapper">
+    <!-- overlay start -->
+    <div class="overlay"></div>
+    <!-- overlay end -->
     <!-- nav start -->
     <div class="nav" id="nav" data-direction>
       <div class="container row">
-        <a href="index.html" class="logo" id="logo"> Bruno &copy; </a>
+        <a href="index.html" class="logo transition-btn" id="logo">
+          Bruno &copy;
+        </a>
         <div class="nav-links row">
+          <a href="index.html" class="btn hover-btn transition-btn">Home</a>
           <a href="#" class="btn hover-btn">About</a>
-          <a href="#" class="btn hover-btn">Cases</a>
           <a href="#" class="btn hover-btn">Contacts</a>
         </div>
       </div>
@@ -21,14 +26,14 @@
     <!-- nav end -->
 
     <!-- wrapper start -->
-    <main class="wrapper" id="wrapper">
+    <main class="wrapper" id="wrapper" data-barba="container">
       <div class="scrollable">
         <div class="container">
-          <div class="heading center-item">
+          <div class="heading center-item" id="scene">
             <div class="text-box">
               <h1>Showcase</h1>
             </div>
-            <div class="circle"></div>
+            <div class="circle" data-depth="0.2"></div>
           </div>
           <div class="image-container left-side">
             <a href="#" class="btn">Vumwerller</a>

@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="loading" data-barba="wrapper">
+    <!-- loader start -->
+    <div class="loader" id="loader">
+      <div class="inner-loader center-item">
+        <div class="text-box">
+          <h1 class="sub-title">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- loader end -->
+    <!-- overlay start -->
+    <div class="overlay"></div>
+    <!-- overlay end -->
     <!-- nav start -->
     <div class="nav" id="nav" data-direction>
       <div class="container row">
         <a href="#" class="logo" id="logo"> Bruno &copy; </a>
         <div class="nav-links row">
           <a href="#" class="btn hover-btn">About</a>
-          <a href="case.html" class="btn hover-btn">Cases</a>
+          <a href="case.html" class="btn hover-btn transition-btn">Cases</a>
           <a href="#" class="btn hover-btn">Contacts</a>
         </div>
       </div>
@@ -21,7 +41,7 @@
     <!-- nav end -->
 
     <!-- wrapper start -->
-    <div class="wrapper" id="wrapper">
+    <div class="wrapper" id="wrapper" data-barba="container">
       <!-- canvas start -->
       <div class="experience"></div>
       <!-- canvas end -->
@@ -61,7 +81,5 @@
       <!-- scroll container end -->
     </div>
     <!-- wrapper end -->
-
-    <!-- shaders start -->
   </body>
 </html>

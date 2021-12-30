@@ -276,6 +276,12 @@ body {
   font-weight: var(--bold-font);
 }
 
+.sub-title {
+  font-size: var(--h2-font);
+  font-weight: var(--bold-font);
+  letter-spacing: 4px;
+}
+
 .mini-title {
   font-size: var(--h4-font);
   font-weight: var(--light-font);
@@ -318,7 +324,7 @@ body {
   left: 0;
   height: fit-content;
   width: 100%;
-  z-index: 1000;
+  z-index: 800;
   box-shadow: 0 0 2px 0 var(--border-color);
   transform: translate3d(0, 0, 0);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease;
@@ -372,4 +378,45 @@ footer {
 footer p.copyright {
   letter-spacing: 1px;
   font-weight: var(--light-font);
+}
+
+/* loader start */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  z-index: 10000;
+}
+
+.loader .inner-loader {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.loader .inner-loader h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 6px;
+}
+
+.loader .inner-loader .text-box {
+  overflow: visible;
+}
+
+/* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: var(--theme-color);
+  transform: translateY(-100%);
 }
