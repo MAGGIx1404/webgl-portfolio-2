@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: var(--theme-color);
+  background-color: var(--theme-color) !important;
 }
 
 /* banner start */

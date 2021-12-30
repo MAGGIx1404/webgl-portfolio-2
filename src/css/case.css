@@ -1,0 +1,126 @@
+/* scrollable */
+
+body,
+html {
+  overscroll-behavior: none;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--dark-theme-color) !important;
+}
+
+/* scroller */
+::-webkit-scrollbar {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 10px;
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color);
+  border-radius: 20px;
+}
+
+main {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.scrollable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-side {
+  justify-content: flex-start;
+}
+
+.right-side {
+  justify-content: flex-end;
+}
+
+.image-container a {
+  position: absolute;
+  font-size: var(--h2-font);
+  font-weight: var(--bold-font);
+  font-family: var(--i-font);
+  font-style: italic;
+  line-height: 1.2;
+  z-index: 10;
+  mix-blend-mode: overlay;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.image-container a:hover {
+  color: var(--theme-color);
+}
+
+.left-side a {
+  right: 0;
+  text-align: right;
+}
+
+.right-side a {
+  left: 0;
+  text-align: left;
+}
+
+img {
+  position: absolute;
+  height: 70%;
+  visibility: hidden;
+}
+
+canvas {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+
+.heading {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.heading .circle {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  opacity: 0.3;
+  background-color: var(--theme-color);
+  transform-origin: center;
+  transition: all 0.5s ease;
+}
+
+.heading .text-box {
+  z-index: 10;
+  text-align: center;
+}
+
+.heading .text-box h1 {
+  font-size: var(--h1-font);
+  font-family: var(--i-font);
+}
+
+/* nav */
+.nav {
+  mix-blend-mode: difference;
+}
