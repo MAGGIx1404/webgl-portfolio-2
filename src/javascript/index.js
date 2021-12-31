@@ -9,7 +9,7 @@ const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
 const experience = new Experience({
-  targetElement: document.querySelector(".experience"),
+  // targetElement: document.querySelector(".experience"),
 });
 
 // page transitions
@@ -46,6 +46,8 @@ if (localStorage.getItem("first") === null) {
   pageLoader();
   localStorage.setItem("first", "nope!");
 }
+
+// localStorage.clear();
 
 // overlay events
 function initOverlay() {

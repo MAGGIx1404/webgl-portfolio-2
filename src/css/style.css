@@ -373,11 +373,30 @@ body {
 footer {
   padding: var(--pad-10);
   box-shadow: 0 0 1px var(--white-color);
+  min-height: 16rem;
+  position: relative;
 }
 
 footer p.copyright {
   letter-spacing: 1px;
   font-weight: var(--light-font);
+}
+
+footer .container .credits {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+footer .container .credits p a,
+footer .container .credits p {
+  font-size: var(--small-text);
+}
+
+footer .container .credits p a:hover {
+  color: var(--theme-color);
 }
 
 /* loader start */
@@ -418,5 +437,4 @@ footer p.copyright {
   height: 100%;
   z-index: 999;
   background-color: var(--theme-color);
-  transform: translateY(-100%);
 }

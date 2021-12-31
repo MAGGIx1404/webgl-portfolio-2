@@ -183,18 +183,10 @@ const overlay = document.querySelector(".overlay");
 // overlay events
 function initOverlay() {
   const tl = gsap.timeline();
-  tl.fromTo(
-    overlay,
-    1,
-    {
-      y: "0",
-      ease: Expo.easeInOut,
-    },
-    {
-      y: "-100%",
-      ease: Expo.easeInOut,
-    }
-  );
+  tl.to(overlay, 1.1, {
+    y: "-100%",
+    ease: Expo.easeInOut,
+  });
 }
 
 // on load event
