@@ -195,8 +195,9 @@ body {
   --black-color: #000;
   --white-color: #fff;
   --bg-color: #cecece;
-  --dark-theme-color: #150127;
-  --theme-color: #7f00ff;
+  --dark-theme-color: #0f0f0f;
+  /* --theme-color: #7f00ff; */
+  --theme-color: #747474;
   --border-color: #cecece;
   --h1-font: 11vw;
   --h2-font: 9vw;
