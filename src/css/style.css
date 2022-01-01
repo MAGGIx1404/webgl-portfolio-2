@@ -439,3 +439,14 @@ footer .container .credits p a:hover {
   z-index: 999;
   background-color: var(--theme-color);
 }
+
+/* media */
+@media only screen and (max-width: 1000px) {
+  :root {
+    --h1-font: 15vw;
+    --btn-font: 1.5vw;
+  }
+  .nav .nav-links {
+    width: 25%;
+  }
+}
