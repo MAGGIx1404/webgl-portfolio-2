@@ -445,8 +445,33 @@ footer .container .credits p a:hover {
   :root {
     --h1-font: 15vw;
     --btn-font: 1.5vw;
+    --small-text: 1.6vw;
   }
   .nav .nav-links {
     width: 25%;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  :root {
+    --h1-font: 18vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --small-text: 1.8vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav .logo {
+    font-size: 1rem;
+  }
+  .nav .nav-links {
+    width: 70%;
+  }
+  .nav .nav-links a {
+    font-size: 0.8rem;
   }
 }

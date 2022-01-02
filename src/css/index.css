@@ -95,3 +95,33 @@ body {
 .banner .container .credits p a:hover {
   color: var(--theme-color);
 }
+
+/*  */
+@media only screen and (max-width: 600px) {
+  .banner .container .social-links {
+    display: flex;
+    flex-direction: column;
+    left: 2vw;
+  }
+  .banner .container .copyrights {
+    bottom: 1vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner .container .credits p {
+    font-size: 0.5rem;
+  }
+  .banner .container .credits p a {
+    font-size: 0.5rem;
+  }
+  .banner .container .left-title {
+    top: 30vh;
+  }
+  .banner .container .right-title {
+    bottom: 30vh;
+  }
+  .banner .container .social-links a {
+    font-size: 0.7rem;
+  }
+}
