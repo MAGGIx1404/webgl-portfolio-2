@@ -5,8 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const buildPath = path.resolve(__dirname, "dist");
-const BundleAnalyzePlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const BundleAnalyzePlugin =
+//   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   // This option controls if and how source maps are generated
@@ -22,7 +22,7 @@ module.exports = {
     path: buildPath,
   },
   plugins: [
-    new BundleAnalyzePlugin(),
+    // new BundleAnalyzePlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
